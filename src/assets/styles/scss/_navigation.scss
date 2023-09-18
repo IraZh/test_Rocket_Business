@@ -1,0 +1,39 @@
+
+.navigation {
+    height: 43px;
+    background-color: #1FA181;
+    display: flex;
+    align-items: center; 
+  }
+  
+  .navigation_menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 15vw;
+  }
+  
+  .navigation_menu li {
+    margin: 0;
+    padding: 0;
+    margin-right: 3vw;
+  }
+  
+  .navigation_menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .navigation_menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .navigation_menu li a:hover {
+    color: #b1adad; /* Цвет при наведении на ссылку */
+  }
+  
