@@ -1,0 +1,168 @@
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 80vw;
+    height: 15%;
+    margin: 7% auto 0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: none; 
+    border: none; 
+    margin: 0 5px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.pagination-text {
+    display: inline-block;
+    font-size: 18px;
+}
+
+/* Стили для первого слайда */
+.slide.active .slide-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content {
+    width: 50%;
+    padding-left: 3%;
+    background-color: #E2F0EF;
+}
+
+h1 {
+    padding: 0%;
+    margin: 0%;
+    font-family: PT Sans Caption;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.58px;
+    letter-spacing: 0em;
+    color: #364844;
+}
+
+h2 {
+    font-family: PT Sans Caption;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28.47px;
+    letter-spacing: 0em;
+    color: #364844;
+}
+
+ul {
+    padding: 0;
+    font-family: PT Sans Caption;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.7px;
+    letter-spacing: 0em;
+    color: #364844;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #364844;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #364844;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: #868686;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.green-button, .white-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.green-button {
+    background-color: #0DBC91;
+    color: #fff;
+}
+
+.white-button {
+    background-color: #E2F0EF;
+    color: #0DBC91;
+    margin-left: 10px;
+}
+
+.right-content {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезаем изображение и сохраняем пропорции */
+    object-position: left bottom; /* Выравнивание изображения в нижнем левом углу */
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 90%; /* Уменьшаем максимальную ширину на более узких экранах */
+    }
+
+    /* Дополнительные стили для маленьких экранов, если необходимо */
+}
+
+@media (max-width: 576px) {
+    .slider-container {
+        margin: 10% auto 0; /* Изменяем отступ сверху на очень узких экранах */
+    }
+
+    /* Дополнительные стили для очень узких экранов, если необходимо */
+}

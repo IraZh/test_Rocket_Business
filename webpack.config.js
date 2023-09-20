@@ -18,8 +18,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['css-loader'],
-      }
+        use: ['style-loader', 'css-loader'],
+      },
+      // Добавьте новое правило для обработки файлов Swiper.js (если необходимо)
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        use: ['file-loader'],
+      },
     ],
   },
   plugins: [
@@ -28,5 +33,3 @@ module.exports = {
     }),
   ],
 };
-
-
