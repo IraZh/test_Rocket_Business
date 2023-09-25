@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var button = document.querySelector(".header_button_1");
+    var form = document.getElementById("contactForm");
+    var closeButton = document.getElementById("closeForm");
+    
+    button.addEventListener("click", function () {
+        form.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function () {
+        form.style.display = "none";
+    });
+});
+
+
+//Слайдер
+
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevArrow = document.querySelector('.arrow.prev');

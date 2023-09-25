@@ -81,6 +81,17 @@ html {
   border-color: #00D29F;
 }
 
+#contactForm {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c3f1c1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
 .navigation {
   height: 43px;
   background-color: #1FA181;

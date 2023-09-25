@@ -27,6 +27,19 @@
         <div class="header_button">
             <button class="header_button_1">Записаться на прием</button>
         </div>
+        <form id="contactForm" action="process.php" method="post" class="open-form">
+            <button id="closeForm" type="button" class="close-button">x</button>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="email">Ваш Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    
+            <input type="submit" value="Отправить">
+        </form>
     </header>
 
     <nav class="navigation">
