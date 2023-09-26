@@ -5,11 +5,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development', 
   entry: {
-    main: './src/index.js', 
+    main: './api/new_js.js', 
   },
   output: {
-    filename: 'bundle.js', 
-    path: path.resolve(__dirname, 'dist'), 
+    filename: 'public.js', 
+    path: path.resolve(__dirname, 'public'), 
   },
   module: {
     rules: [
@@ -29,11 +29,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './api/index.html',
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './src/sendemail.php', to: 'sendemail.php' } // Копируем sendemail.php в папку dist
+        { from: './api/sendemail.php', to: 'sendemail.php' } 
       ],
     }),
   ],
