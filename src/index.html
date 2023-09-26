@@ -27,8 +27,11 @@
         <div class="header_button">
             <button class="header_button_1">Записаться на прием</button>
         </div>
-        <form id="contactForm" action="process.php" method="post" class="open-form">
-            <button id="closeForm" type="button" class="close-button">x</button>
+        <form id="contactForm" action="sendemail.php" method="post" class="open-form">
+            <input type="hidden" name="project_name" value="Site Test">
+            <input type="hidden" name="admin_email" value="winter-15@mail.ru">
+            <input type="hidden" name="form_subject" value="Form">
+            <button id="closeForm" type="button" class="close-button">x</button><br><br>
             <label for="name">Ваше имя:</label>
             <input type="text" id="name" name="name" required><br><br>
     

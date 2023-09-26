@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development', 
@@ -20,7 +21,6 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      // Добавьте новое правило для обработки файлов Swiper.js (если необходимо)
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
         use: ['file-loader'],
@@ -30,6 +30,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/sendemail.php', to: 'sendemail.php' } // Копируем sendemail.php в папку dist
+      ],
     }),
   ],
 };

@@ -27,6 +27,22 @@
         <div class="header_button">
             <button class="header_button_1">Записаться на прием</button>
         </div>
+        <form id="contactForm" action="sendemail.php" method="post" class="open-form">
+            <input type="hidden" name="project_name" value="Site Test">
+            <input type="hidden" name="admin_email" value="winter-15@mail.ru">
+            <input type="hidden" name="form_subject" value="Form">
+            <button id="closeForm" type="button" class="close-button">x</button><br><br>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="email">Ваш Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    
+            <input type="submit" value="Отправить">
+        </form>
     </header>
 
     <nav class="navigation">
@@ -118,6 +134,6 @@
         </div>    
     </footer>
 
-    <script src="d9e15e61c93a2c4ea7c7.js"></script>
+    <script src="fb8f209b0c302399c67c.js"></script>
 </body>
 </html>
