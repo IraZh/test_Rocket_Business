@@ -1,20 +1,24 @@
 .main {
     margin-left: 15vw;
     height: 533px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text image";
+    overflow-x: hidden;
 }
 
 .main_text {
     width: 416px;
     height: 141px;
     margin-right: 7%;
+    display: grid;
+    grid-area: text;
 }
 
 .main_text_title {
     margin-top: 7vw;
     margin-bottom: 0%;
-    font-family: PT Sans Caption;
+    font-family: 'PT Sans Caption';
     font-size: 36px;
     font-weight: 700;
     line-height: 46.58px;
@@ -24,7 +28,7 @@
 
 .main_text_subtitle {
     margin-top: 1vw;
-    font-family: PT Sans Caption;
+    font-family: 'PT Sans Caption';
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -34,6 +38,8 @@
 .main_image {
     max-width: 100%;
     height: auto;
+    display: grid;
+    grid-area: image;
 }
 
 @media (max-width: 768px) {
@@ -43,16 +49,23 @@
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
-        "images"
+        "image"
         "text";
     }
     .main_image {
         display: grid;
-        grid-area: "images";
+        grid-area: image;
+    }
+
+    .main_text_subtitle {
+        margin-right: 5%;
+        font-size: 14px; 
+        font-weight: 400;
+        line-height: 21px;
     }
     .main_text {
         display: grid;
-        grid-area: "text";
+        grid-area: text;
         margin-left: 4vw;
         margin-right: 4vw;
     }
