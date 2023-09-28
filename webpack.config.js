@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development', 
   entry: {
-    main: './api/new_js.js', 
+    main: './public/new_js.js', 
   },
   output: {
     filename: 'public.js', 
@@ -29,11 +29,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './api/index.html',
+      template: './public/index.html',
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './api/sendemail.php', to: 'sendemail.php' } 
+        { from: './public/sendemail.php', to: 'sendemail.php' } 
       ],
     }),
   ],
