@@ -1,3 +1,21 @@
+$(document).ready(function(){
+	$('#nav-icon1').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+
+
+const navIcon = document.getElementById('nav-icon1');
+const overlay = document.querySelector('.overlay');
+const menuToggle = document.querySelector('.menu-toggle');
+
+navIcon.addEventListener('click', () => {
+    overlay.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var button = document.querySelector(".header_button_1");
     var form = document.getElementById("contactForm");
@@ -17,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function() {
 
 	//E-mail Ajax Send
-	$("form").submit(function() { //Change
+	$("form").submit(function() { 
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "sendemail.php", //Change
+			url: "sendemail.php", 
 			data: th.serialize()
 		}).done(function() {
 			alert("Thank you!");

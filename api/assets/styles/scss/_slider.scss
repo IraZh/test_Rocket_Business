@@ -194,6 +194,21 @@
     .slider-container {
         max-width: 90%; 
     }
+    .slide-content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "img"
+        "text";
+    }
+    .right-content {
+        display: grid;
+        grid-area: "img";
+    }
+    .left-content{
+        display: grid;
+        grid-area: "text";
+    }
 
 }
 

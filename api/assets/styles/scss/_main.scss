@@ -35,3 +35,25 @@
     max-width: 100%;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .main{
+        margin: 0%;
+        padding: 0%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "images"
+        "text";
+    }
+    .main_image {
+        display: grid;
+        grid-area: "images";
+    }
+    .main_text {
+        display: grid;
+        grid-area: "text";
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+}
