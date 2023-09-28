@@ -1,9 +1,3 @@
-$(document).ready(function(){
-	$('#nav-icon1').click(function(){
-		$(this).toggleClass('open');
-	});
-});
-
 
 const navIcon = document.getElementById('nav-icon1');
 const overlay = document.querySelector('.overlay');
@@ -14,7 +8,11 @@ navIcon.addEventListener('click', () => {
     menuToggle.classList.toggle('open');
 });
 
-
+$(document).ready(function(){
+	$('#nav-icon1').click(function(){
+		$(this).toggleClass('open');
+	});
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     var button = document.querySelector(".header_button_1");
